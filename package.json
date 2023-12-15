@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "description": "RTSP Server DEMO",
+  "author": "ChengJian",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "npm@8.19.4",
+  "scripts": {
+    "start": "npm run start:rtsp2hls && npm run start:mediamtx && npm run monit",
+    "stop": "npm run stop:rtsp2hls && npm run stop:mediamtx",
+    "monit": "pm2 monit",
+    "start:rtsp2hls": "pm2 start packages/rtsp2hls/src/index.js --name rtsp2hls",
+    "stop:rtsp2hls": "pm2 delete packages/rtsp2hls/src/index.js",
+    "start:mediamtx": "cd ./mediamtx && pm2 start ./mediamtx.exe --name mediamtx",
+    "stop:mediamtx": "cd ./mediamtx && pm2 delete ./mediamtx.exe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/948764321/rtsp-server-demo.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "yaml": "^2.3.1"
+  },
+  "devDependencies": {
+    "pm2": "^5.3.0"
+  }
+}
