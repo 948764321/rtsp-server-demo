@@ -31,7 +31,7 @@ npm install
 
 **获取 MediaMTX**
 
-由于 `MediaMTX` 是 `.exe` 文件，因此需要自行[下载](https://github.com/bluenviron/mediamtx/releases)，并放置于 `rtsp-server` 同级目录下，本演示仓库中用 `.temp` 替代对应位置。
+由于 `MediaMTX` 是 `.exe` 文件，因此需要自行[下载](https://github.com/bluenviron/mediamtx/releases)或[下载本仓库 Releases 包](https://github.com/948764321/rtsp-server-demo/releases/tag/v1.0.0)，并放置于 `rtsp-server` 同级目录下，本演示仓库中用 `.temp` 替代对应位置。
 
 **启动服务**
 ```bash
